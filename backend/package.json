@@ -8,11 +8,14 @@
   "dependencies": {
     "@zxing/library": "^0.21.3",
     "axios": "^1.11.0",
+    "bcryptjs": "^3.0.2",
     "body-parser": "^1.20.2",
     "canvas": "^3.1.2",
     "cors": "^2.8.5",
     "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
     "multer": "^2.0.2",
+    "nodemailer": "^7.0.5",
     "sqlite3": "^5.1.6"
   }
 }

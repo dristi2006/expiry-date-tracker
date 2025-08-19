@@ -5,6 +5,9 @@ const cors = require('cors');
 const itemRoutes = require('./routes/itemRoutes');
 const reminderRoutes = require('./routes/reminderRoutes');
 const lookbookRoutes = require('./routes/lookbookRoutes');
+const userRoutes = require('./routes/user');
+const settingsRoutes = require('./routes/settingsRoutes');
+const sendEmail = require("./utils/sendEmail");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -23,6 +26,8 @@ app.use(bodyParser.json());
 app.use('/api/items', itemRoutes);
 app.use('/api/reminders', reminderRoutes);
 app.use('/api/lookbook', lookbookRoutes);
+app.use('/api/auth', userRoutes);
+app.use('/api/settings', settingsRoutes);
 
 // Health check
 app.get('/', (req, res) => {
